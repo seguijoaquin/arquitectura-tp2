@@ -3,12 +3,12 @@ module.exports = {
   debug: true,
 
   // Base uri for remote python service
-  remoteBaseUri: 'http://localhost:8000',
+  remoteBaseUri: 'http://ec2-54-85-94-152.compute-1.amazonaws.com:3000',
 
   // Options for creating redis client
   redis: {
     host: 'localhost',
-    port: '1234'
+    port: '6379'
   },
 
   datadog: {

@@ -35,15 +35,15 @@ resource "aws_elb" "node_asg_elb" {
   }
 
   provisioner "local-exec" {
-    command = "echo ${aws_elb.node_asg_elb.dns_name} >> node/elb_dns"
+    command = "echo ${aws_elb.node_asg_elb.dns_name} > node/elb_dns"
   }
 }
 
 resource "aws_autoscaling_group" "node_asg" {
   name_prefix      = "node_asg-"
-  max_size         = 3
+  max_size         = 1
   min_size         = 0
-  desired_capacity = 0
+  desired_capacity = 1
 
   load_balancers     = ["${aws_elb.node_asg_elb.name}"]
   availability_zones = ["${var.availability_zone}"]

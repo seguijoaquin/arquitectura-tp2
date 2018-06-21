@@ -1,2 +1,5 @@
 .terraform/
 terraform*
+key.pem
+python/ip
+node/elb_dns
