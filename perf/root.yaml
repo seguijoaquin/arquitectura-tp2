@@ -1,0 +1,27 @@
+config:
+  environments:
+    node:
+      target: 'http://elb_dns.url/'
+
+  pool: 50 # All HTTP requests from all virtual users will be sent over the same connections
+
+  phases:
+    - name: RampUp
+      duration: 30
+      arrivalRate: 5
+      rampTo: 20
+    - name: Intensive
+      duration: 30
+      arrivalRate: 20
+    - name: Stop
+      pause: 5
+    - name: Light
+      duration: 30
+      arrivalRate: 5
+
+scenarios:
+  - name: Root (/)
+    flow:
+      - get:
+          url: '/'
+
