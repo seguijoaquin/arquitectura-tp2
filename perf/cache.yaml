@@ -14,19 +14,9 @@ config:
       duration: 60
       arrivalRate: 20
 
-  plugins:
-    datadog:
-      # Custom hostname (leave blank if not desired)
-      host: ''
-      # Custom metric prefix (defaults to 'artillery.')
-      prefix: 'artillery.'
-      # Additional tags for all metrics
-      tags:
-        - 'mode:test'
-
 scenarios:
-  - name: Remote (/remote)
+  - name: Cached (/cached)
     flow:
       - get:
-          url: '/remote'
+          url: '/remote/cached'
 
