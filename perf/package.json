@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "artillery": "DATADOG_API_KEY=eb2249d73f473c63f6de40b28bee7015 artillery",
+    "artillery": "artillery",
     "scenario": "./run-scenario.sh",
     "report": "./run-report.sh"
   },
