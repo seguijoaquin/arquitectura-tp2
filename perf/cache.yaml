@@ -7,12 +7,12 @@ config:
 
   phases:
     - name: RampUp
-      duration: 30
+      duration: 40
       arrivalRate: 5
-      rampTo: 20
+      rampTo: 25
     - name: Intensive
-      duration: 60
-      arrivalRate: 20
+      duration: 40
+      arrivalRate: 25
 
 scenarios:
   - name: Cached (/cached)

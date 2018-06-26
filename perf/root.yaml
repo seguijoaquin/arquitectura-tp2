@@ -7,22 +7,12 @@ config:
 
   phases:
     - name: RampUp
-      duration: 30
+      duration: 40
       arrivalRate: 5
-      rampTo: 20
+      rampTo: 25
     - name: Intensive
-      duration: 60
-      arrivalRate: 20
-
-  plugins:
-    datadog:
-      # Custom hostname (leave blank if not desired)
-      host: ''
-      # Custom metric prefix (defaults to 'artillery.')
-      prefix: 'artillery.'
-      # Additional tags for all metrics
-      tags:
-        - 'mode:test'
+      duration: 40
+      arrivalRate: 25
 
 scenarios:
   - name: Remote (/remote)

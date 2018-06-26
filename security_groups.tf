@@ -1,6 +1,6 @@
 resource "aws_security_group" "apps" {
   name        = "Main SG for apps"
-  description = "Allow SSH and traffic on port 3000 and Redis port from anywhere"
+  description = "Allow SSH and traffic on port 3000 from anywhere"
   vpc_id      = "${var.vpc_id}"
 
   ingress {

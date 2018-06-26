@@ -41,7 +41,7 @@ resource "aws_elb" "node_asg_elb" {
 
 resource "aws_autoscaling_group" "node_asg" {
   name_prefix      = "node_asg-"
-  max_size         = 1
+  max_size         = 3
   min_size         = 0
   desired_capacity = 1
 
